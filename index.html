@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dinh dưỡng Herbalife – Tư vấn 1-1 miễn phí</title>
+  <meta name="description" content="Tư vấn dinh dưỡng 1-1 miễn phí và hướng dẫn sử dụng sản phẩm Herbalife đúng cách. Đăng ký để được đánh giá thể trạng và gợi ý thực đơn phù hợp.">
+  <meta property="og:title" content="Ăn uống khoa học hơn mỗi ngày – có người đồng hành">
+  <meta property="og:description" content="Tư vấn dinh dưỡng 1-1 miễn phí, hướng dẫn dùng sản phẩm Herbalife đúng cách.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2E7D32',
+            secondary: '#81C784',
+            accent: '#F57C00',
+            ink: '#1B3A1F',
+            mist: '#F3FAF3'
+          },
+          fontFamily: { body: ['"Be Vietnam Pro"', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Be Vietnam Pro', sans-serif; }
+    html { scroll-behavior: smooth; }
+    .todo { background:#FFF3CD; color:#7A5200; padding:0 .3em; border-radius:.25rem; font-weight:600; }
+    :focus-visible { outline: 3px solid #F57C00; outline-offset: 2px; }
+
+    /* ---- Hiệu ứng nút kêu gọi ---- */
+    .cta-shine { position: relative; overflow: hidden; isolation: isolate;
+      box-shadow: 0 8px 20px -6px rgba(245,124,0,.6); transition: transform .2s, box-shadow .2s; }
+    .cta-shine::after { content: ''; position: absolute; inset: 0; z-index: -1;
+      background: linear-gradient(110deg, transparent 30%, rgba(255,255,255,.45) 50%, transparent 70%);
+      transform: translateX(-120%); animation: shine 3.2s ease-in-out infinite; }
+    .cta-shine:hover { transform: translateY(-2px) scale(1.03); box-shadow: 0 14px 28px -8px rgba(245,124,0,.75); }
+    @keyframes shine { 0%, 55% { transform: translateX(-120%); } 100% { transform: translateX(120%); } }
+
+    .fab { position: relative; display: flex; align-items: center; justify-content: center;
+      width: 56px; height: 56px; border-radius: 9999px; color: #fff; font-size: 1.5rem;
+      box-shadow: 0 10px 24px -6px rgba(0,0,0,.35); transition: transform .2s; }
+    .fab:hover { transform: scale(1.1); }
+    .fab::before, .fab::after { content: ''; position: absolute; inset: 0; border-radius: inherit;
+      background: inherit; z-index: -1; animation: ring 2s ease-out infinite; }
+    .fab::after { animation-delay: 1s; }
+    @keyframes ring { 0% { transform: scale(1); opacity: .6; } 100% { transform: scale(1.8); opacity: 0; } }
+    .fab-icon { display: inline-block; animation: wiggle 2.4s ease-in-out infinite; }
+    @keyframes wiggle { 0%, 70%, 100% { transform: rotate(0); } 75% { transform: rotate(-15deg); }
+      80% { transform: rotate(15deg); } 85% { transform: rotate(-10deg); } 90% { transform: rotate(10deg); } }
+    .fab-label { position: absolute; right: 68px; white-space: nowrap; background: #1B3A1F; color: #fff;
+      font-size: .8rem; font-weight: 600; padding: .35rem .7rem; border-radius: .5rem;
+      opacity: 0; transform: translateX(6px); transition: .2s; pointer-events: none; }
+    .fab:hover .fab-label, .fab:focus-visible .fab-label { opacity: 1; transform: none; }
+
+    .sticky-bar { transform: translateY(110%); transition: transform .3s ease; }
+    .sticky-bar.show { transform: none; }
+    .bounce-soft { animation: bounceSoft 2.2s ease-in-out infinite; }
+    @keyframes bounceSoft { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+
+    /* ---- Nhấp nháy phát sáng (chu kỳ ~1.4s, đủ chậm để an toàn cho mắt) ---- */
+    .cta-shine, .blink { animation: blinkGlow 1.4s ease-in-out infinite; }
+    .cta-shine:hover, .blink:hover { animation-play-state: paused; }
+    @keyframes blinkGlow {
+      0%, 100% { filter: brightness(1);    box-shadow: 0 8px 20px -6px rgba(245,124,0,.55); }
+      50%      { filter: brightness(1.18); box-shadow: 0 0 0 4px rgba(255,183,77,.55), 0 0 26px 6px rgba(245,124,0,.75); }
+    }
+    .fab-bar-blink { animation: fabBlink 1.4s ease-in-out infinite; }
+    .fab { animation: fabBlink 1.4s ease-in-out infinite; }
+    @keyframes fabBlink { 0%, 100% { filter: brightness(1); } 50% { filter: brightness(1.3) saturate(1.2); } }
+    .bounce-soft { animation: bounceSoft 2.2s ease-in-out infinite, blinkGlow 1.4s ease-in-out infinite; }
+
+  </style>
+</head>
+<body class="bg-white text-ink">
+
+<!-- =====================================================================
+  CẤU HÌNH — anh/chị điền thông tin thật vào đây trước khi đăng.
+  Mọi chỗ còn trống sẽ hiện nền vàng trên trang để dễ nhận biết.
+====================================================================== -->
+<script>
+  window.LP_CONFIG = {
+    brandName:   'Dinh dưỡng Herbalife – Quốc Hùng',   // Không dùng 'Herbalife Việt Nam' (tên công ty chính thức)
+    memberName:  'Lê Quốc Hùng',   // Họ tên thành viên độc lập Herbalife
+    memberId:    '',   // Mã số thành viên (nếu muốn công khai)
+    phone:       '0886575868',   // VD: '0901234567'
+    zalo:        '0886575868',   // Số Zalo, VD: '0901234567'
+    area:        'Toàn quốc',   // Khu vực phục vụ, VD: 'Buôn Ma Thuột, Đắk Lắk'
+    // Thanh toán VietQR (SePay) — để trống nếu chưa dùng
+    bankId:      '',   // VD: 'MBBank', 'Vietcombank'
+    accountNo:   '',
+    accountName: ''
+  };
+</script>
+
+<!-- NAV -->
+<nav class="fixed top-0 w-full bg-white/95 backdrop-blur shadow-sm z-50">
+  <div class="max-w-6xl mx-auto px-4 flex justify-between items-center h-16">
+    <a href="#" class="flex items-center gap-2 min-w-0">
+      <span class="text-2xl" aria-hidden="true">🌿</span>
+      <span class="min-w-0">
+        <span class="block font-bold text-primary leading-tight truncate" data-cfg="brandName">[Tên thương hiệu]</span>
+        <span class="block text-xs text-gray-500 leading-tight">Thành viên độc lập Herbalife</span>
+      </span>
+    </a>
+    <div class="hidden md:flex gap-8 text-sm font-medium">
+      <a href="#san-pham" class="hover:text-primary">Sản phẩm</a>
+      <a href="#quy-trinh" class="hover:text-primary">Quy trình</a>
+      <a href="#fitclub" class="hover:text-primary">FITCLUB</a>
+      <a href="#faq" class="hover:text-primary">Hỏi đáp</a>
+    </div>
+    <a href="#dang-ky" class="bg-accent text-white px-4 py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition shrink-0">Tư vấn miễn phí</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="pt-28 pb-16 px-4 bg-gradient-to-b from-mist to-white">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <span class="inline-block bg-secondary/30 text-primary text-sm font-semibold px-3 py-1 rounded-full mb-5">Dinh dưỡng + Tập luyện · Tư vấn 1-1</span>
+      <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight mb-5">
+        Ăn uống khoa học hơn mỗi ngày — <span class="text-primary">có người đồng hành</span>
+      </h1>
+      <p class="text-lg text-gray-600 mb-8">
+        Bận rộn, hay bỏ bữa sáng, ăn uống thất thường? Anh/chị được đánh giá thể trạng, gợi ý thực đơn và hướng dẫn dùng sản phẩm dinh dưỡng Herbalife đúng cách — kết hợp tập luyện tại phòng tập FITCLUB. Tư vấn hoàn toàn miễn phí.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-3 mb-8">
+        <a href="#dang-ky" class="bg-accent text-white px-7 py-4 rounded-lg text-lg font-semibold text-center hover:opacity-90 transition">Đăng ký tư vấn miễn phí</a>
+        <a href="#san-pham" class="border-2 border-primary text-primary px-7 py-4 rounded-lg text-lg font-semibold text-center hover:bg-primary hover:text-white transition">Xem sản phẩm</a>
+      </div>
+      <ul class="flex flex-wrap gap-x-6 gap-y-2 text-sm text-gray-600">
+        <li>✓ Sản phẩm chính hãng</li>
+        <li>✓ Hướng dẫn cách dùng</li>
+        <li>✓ Theo dõi định kỳ</li>
+      </ul>
+    </div>
+    <!-- Minh họa: thay bằng ảnh thật do anh/chị chụp (không dùng ảnh/logo của hãng khi chưa được phép) -->
+    <div class="relative">
+      <div class="aspect-square max-w-md mx-auto rounded-[2rem] bg-gradient-to-br from-secondary/40 to-primary/20 flex flex-col items-center justify-center gap-4 p-8 text-center">
+        <div class="text-8xl" aria-hidden="true">🥤</div>
+        <p class="font-bold text-2xl text-primary">Bữa sáng đủ chất<br>trong khoảng 2 phút</p>
+        <p class="text-sm text-gray-600">Pha với nước hoặc sữa, kết hợp trái cây và rau xanh</p>
+      </div>
+      <div class="absolute -bottom-4 left-4 bg-white shadow-lg rounded-xl px-4 py-3 text-sm">
+        <span class="font-semibold">Khu vực:</span> <span data-cfg="area">[Khu vực phục vụ]</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VẤN ĐỀ -->
+<section class="py-16 px-4">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl sm:text-4xl font-bold text-center mb-3">Anh/chị có đang gặp những điều này?</h2>
+    <p class="text-center text-gray-600 mb-10 max-w-2xl mx-auto">Nhịp sống bận rộn khiến việc ăn uống đủ chất trở thành thử thách với nhiều người.</p>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="p-6 rounded-2xl bg-mist"><div class="text-4xl mb-3">⏰</div><h3 class="font-semibold mb-1">Bỏ bữa sáng</h3><p class="text-sm text-gray-600">Sáng vội đi làm, đưa con đi học, không kịp ăn.</p></div>
+      <div class="p-6 rounded-2xl bg-mist"><div class="text-4xl mb-3">🍜</div><h3 class="font-semibold mb-1">Ăn vội, ăn thất thường</h3><p class="text-sm text-gray-600">Nhiều tinh bột, dầu mỡ, ít rau và đạm.</p></div>
+      <div class="p-6 rounded-2xl bg-mist"><div class="text-4xl mb-3">😮‍💨</div><h3 class="font-semibold mb-1">Hay mệt giữa buổi</h3><p class="text-sm text-gray-600">Năng lượng lên xuống thất thường trong ngày.</p></div>
+      <div class="p-6 rounded-2xl bg-mist"><div class="text-4xl mb-3">⚖️</div><h3 class="font-semibold mb-1">Muốn quản lý cân nặng</h3><p class="text-sm text-gray-600">Nhưng không biết bắt đầu từ đâu cho bền vững.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SẢN PHẨM -->
+<section id="san-pham" class="py-16 px-4 bg-mist">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl sm:text-4xl font-bold text-center mb-3">Sản phẩm dinh dưỡng Herbalife</h2>
+    <p class="text-center text-gray-600 mb-10 max-w-2xl mx-auto">Gợi ý cách dùng cụ thể sẽ được tư vấn theo thể trạng và thói quen của từng người.</p>
+    <!-- Lưu ý: tên, công dụng, giá phải khớp nhãn sản phẩm & thông tin công bố tại Việt Nam. Kiểm tra lại trước khi đăng. -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <article class="bg-white rounded-2xl p-6 shadow-sm flex flex-col">
+        <div class="h-28 rounded-xl bg-secondary/20 flex items-center justify-center text-5xl mb-4" aria-hidden="true">🥤</div>
+        <h3 class="font-bold text-lg mb-1">Formula 1 – Hỗn hợp dinh dưỡng</h3>
+        <p class="text-sm text-gray-600 mb-4 flex-1">Bữa ăn dinh dưỡng pha nhanh, cung cấp đạm, chất xơ, vitamin và khoáng chất. Phù hợp cho bữa sáng bận rộn.</p>
+        <p class="font-semibold text-primary">Giá: <span class="todo">[cập nhật]</span></p>
+      </article>
+      <article class="bg-white rounded-2xl p-6 shadow-sm flex flex-col">
+        <div class="h-28 rounded-xl bg-secondary/20 flex items-center justify-center text-5xl mb-4" aria-hidden="true">🍵</div>
+        <h3 class="font-bold text-lg mb-1">Trà thảo mộc cô đặc</h3>
+        <p class="text-sm text-gray-600 mb-4 flex-1">Thức uống ít năng lượng, dùng nóng hoặc lạnh, giúp nhắc anh/chị uống đủ nước trong ngày.</p>
+        <p class="font-semibold text-primary">Giá: <span class="todo">[cập nhật]</span></p>
+      </article>
+      <article class="bg-white rounded-2xl p-6 shadow-sm flex flex-col">
+        <div class="h-28 rounded-xl bg-secondary/20 flex items-center justify-center text-5xl mb-4" aria-hidden="true">💪</div>
+        <h3 class="font-bold text-lg mb-1">Bột Protein</h3>
+        <p class="text-sm text-gray-600 mb-4 flex-1">Bổ sung đạm, có thể pha cùng Formula 1 để tăng lượng đạm cho bữa ăn.</p>
+        <p class="font-semibold text-primary">Giá: <span class="todo">[cập nhật]</span></p>
+      </article>
+      <article class="bg-white rounded-2xl p-6 shadow-sm flex flex-col">
+        <div class="h-28 rounded-xl bg-secondary/20 flex items-center justify-center text-5xl mb-4" aria-hidden="true">🌵</div>
+        <h3 class="font-bold text-lg mb-1">Nước uống Lô hội cô đặc</h3>
+        <p class="text-sm text-gray-600 mb-4 flex-1">Pha cùng nước lọc thành thức uống thanh mát, hỗ trợ thói quen uống đủ nước.</p>
+        <p class="font-semibold text-primary">Giá: <span class="todo">[cập nhật]</span></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- COMBO -->
+<section class="py-16 px-4">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-3xl sm:text-4xl font-bold text-center mb-10">Gói gợi ý để bắt đầu</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="border-2 border-gray-200 rounded-2xl p-8 hover:border-primary transition">
+        <h3 class="text-2xl font-bold mb-1">Bữa sáng dinh dưỡng</h3>
+        <p class="text-gray-600 mb-4">Cho người bận rộn muốn ăn sáng đủ chất</p>
+        <p class="text-3xl font-extrabold text-primary mb-6"><span class="todo">[Giá combo]</span></p>
+        <ul class="space-y-2 mb-8 text-sm">
+          <li>✓ Formula 1 – Hỗn hợp dinh dưỡng</li>
+          <li>✓ Trà thảo mộc cô đặc</li>
+          <li>✓ Hướng dẫn cách pha & thực đơn mẫu</li>
+          <li>✓ Nhắc lịch & hỏi thăm qua Zalo</li>
+        </ul>
+        <a href="#dang-ky" class="block text-center bg-gray-100 font-semibold py-3 rounded-lg hover:bg-gray-200 transition">Nhận tư vấn</a>
+      </div>
+      <div class="border-2 border-accent rounded-2xl p-8 relative shadow-xl">
+        <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-white text-xs font-semibold px-3 py-1 rounded-full whitespace-nowrap">Có theo dõi định kỳ</span>
+        <h3 class="text-2xl font-bold mb-1">Đồng hành quản lý cân nặng</h3>
+        <p class="text-gray-600 mb-4">Kết hợp dinh dưỡng – vận động – thói quen</p>
+        <p class="text-3xl font-extrabold text-primary mb-6"><span class="todo">[Giá combo]</span></p>
+        <ul class="space-y-2 mb-8 text-sm">
+          <li>✓ Formula 1 + Bột Protein</li>
+          <li>✓ Trà thảo mộc + Lô hội cô đặc</li>
+          <li>✓ Đánh giá thể trạng ban đầu</li>
+          <li>✓ Thực đơn & gợi ý vận động theo tuần</li>
+          <li>✓ Theo dõi tiến trình định kỳ</li>
+        </ul>
+        <a href="#dang-ky" class="block text-center bg-accent text-white font-semibold py-3 rounded-lg hover:opacity-90 transition">Đăng ký ngay</a>
+      </div>
+    </div>
+    <p class="text-xs text-gray-500 text-center mt-6">Kết quả khác nhau tùy cơ địa, chế độ ăn uống và vận động của mỗi người. Chúng tôi không cam kết kết quả cụ thể.</p>
+  </div>
+</section>
+
+<!-- QUY TRÌNH -->
+<section id="quy-trinh" class="py-16 px-4 bg-primary text-white">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl sm:text-4xl font-bold text-center mb-10">Đồng hành cùng anh/chị trong 4 bước</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-white/10 rounded-2xl p-6"><div class="text-3xl font-extrabold text-secondary mb-2">01</div><h3 class="font-semibold text-lg mb-1">Trò chuyện & đánh giá</h3><p class="text-sm text-white/80">Tìm hiểu thói quen ăn uống, sinh hoạt và mục tiêu của anh/chị.</p></div>
+      <div class="bg-white/10 rounded-2xl p-6"><div class="text-3xl font-extrabold text-secondary mb-2">02</div><h3 class="font-semibold text-lg mb-1">Gợi ý thực đơn</h3><p class="text-sm text-white/80">Xây thực đơn đơn giản, dễ theo, phù hợp món ăn Việt hằng ngày.</p></div>
+      <div class="bg-white/10 rounded-2xl p-6"><div class="text-3xl font-extrabold text-secondary mb-2">03</div><h3 class="font-semibold text-lg mb-1">Dùng sản phẩm đúng cách</h3><p class="text-sm text-white/80">Hướng dẫn liều lượng, cách pha và thời điểm dùng theo nhãn.</p></div>
+      <div class="bg-white/10 rounded-2xl p-6"><div class="text-3xl font-extrabold text-secondary mb-2">04</div><h3 class="font-semibold text-lg mb-1">Theo dõi định kỳ</h3><p class="text-sm text-white/80">Hỏi thăm, điều chỉnh để duy trì thói quen lâu dài.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FITCLUB -->
+<!-- Thông tin lấy từ hồ sơ Zalo của anh Lê Quốc Hùng. Địa chỉ, giờ mở cửa, giá gói tập: cần anh Hùng cung cấp. -->
+<section id="fitclub" class="py-16 px-4 bg-ink text-white">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <span class="inline-block bg-accent text-white text-sm font-semibold px-3 py-1 rounded-full mb-5">Dinh dưỡng + Tập luyện</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold leading-tight mb-4">FITCLUB VIỆT NAM<br><span class="text-secondary">Chuỗi phòng tập thông minh</span></h2>
+      <p class="text-white/80 mb-6">Dinh dưỡng đúng là một nửa chặng đường — nửa còn lại là tập luyện đúng cách. Anh Lê Quốc Hùng, đồng sáng lập FITCLUB VIỆT NAM, đồng hành cùng anh/chị cả trong bữa ăn lẫn trên sàn tập.</p>
+      <div class="grid grid-cols-3 gap-3 mb-8 text-center">
+        <div class="bg-white/10 rounded-xl p-4"><div class="text-3xl mb-1" aria-hidden="true">💪</div><p class="font-semibold text-sm">Tăng cơ</p></div>
+        <div class="bg-white/10 rounded-xl p-4"><div class="text-3xl mb-1" aria-hidden="true">🔥</div><p class="font-semibold text-sm">Giảm mỡ</p></div>
+        <div class="bg-white/10 rounded-xl p-4"><div class="text-3xl mb-1" aria-hidden="true">🏆</div><p class="font-semibold text-sm">Độ body</p></div>
+      </div>
+      <a href="#dang-ky" class="inline-block bg-accent text-white px-7 py-4 rounded-lg text-lg font-semibold hover:opacity-90 transition">Đăng ký tập thử & tư vấn</a>
+    </div>
+    <div class="bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4">
+      <h3 class="text-xl font-bold">Thông tin phòng tập</h3>
+      <p><span class="text-white/60">Địa chỉ:</span> <span class="todo">[Địa chỉ các cơ sở]</span></p>
+      <p><span class="text-white/60">Giờ mở cửa:</span> <span class="todo">[Giờ mở cửa]</span></p>
+      <p><span class="text-white/60">Gói tập:</span> <span class="todo">[Tên gói & giá]</span></p>
+      <p><span class="text-white/60">Ưu đãi:</span> <span class="todo">[Ưu đãi cho khách dùng dinh dưỡng, nếu có]</span></p>
+      <p class="text-xs text-white/50 pt-2 border-t border-white/10">Kết quả tập luyện phụ thuộc vào cơ địa, chế độ ăn và mức độ chăm chỉ của mỗi người.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ĐĂNG KÝ -->
+<section id="dang-ky" class="py-16 px-4 bg-mist">
+  <div class="max-w-xl mx-auto">
+    <h2 class="text-3xl sm:text-4xl font-bold text-center mb-3">Đăng ký tư vấn miễn phí</h2>
+    <p class="text-center text-gray-600 mb-8">Điền thông tin, bấm gửi — nội dung sẽ được sao chép và mở Zalo để anh/chị gửi trực tiếp cho tư vấn viên.</p>
+    <form id="lead-form" class="bg-white rounded-2xl shadow-md p-6 sm:p-8 space-y-4">
+      <div>
+        <label for="f-name" class="block text-sm font-semibold mb-1">Họ và tên *</label>
+        <input id="f-name" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:border-primary focus:outline-none" placeholder="Nguyễn Văn A">
+      </div>
+      <div>
+        <label for="f-phone" class="block text-sm font-semibold mb-1">Số điện thoại / Zalo *</label>
+        <input id="f-phone" required type="tel" pattern="[0-9 +]{9,13}" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:border-primary focus:outline-none" placeholder="09xx xxx xxx">
+      </div>
+      <div>
+        <label for="f-goal" class="block text-sm font-semibold mb-1">Anh/chị quan tâm điều gì?</label>
+        <select id="f-goal" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:border-primary focus:outline-none">
+          <option>Bữa sáng dinh dưỡng nhanh</option>
+          <option>Quản lý cân nặng</option>
+          <option>Bổ sung đạm khi tập luyện</option>
+          <option>Tập luyện tại FITCLUB</option>
+          <option>Dinh dưỡng + tập luyện trọn gói</option>
+          <option>Tìm hiểu sản phẩm</option>
+        </select>
+      </div>
+      <div>
+        <label for="f-note" class="block text-sm font-semibold mb-1">Ghi chú (không bắt buộc)</label>
+        <textarea id="f-note" rows="3" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:border-primary focus:outline-none" placeholder="Thời gian thuận tiện để gọi lại..."></textarea>
+      </div>
+      <button type="submit" class="w-full bg-accent text-white py-4 rounded-lg text-lg font-semibold hover:opacity-90 transition">Gửi đăng ký qua Zalo</button>
+      <p id="form-msg" class="text-sm text-center text-primary hidden" role="status"></p>
+      <p class="text-xs text-gray-500 text-center">Thông tin chỉ dùng để liên hệ tư vấn, không chia sẻ cho bên thứ ba.</p>
+    </form>
+    <div class="flex flex-col sm:flex-row gap-3 justify-center mt-6 text-center">
+      <a id="btn-call" href="#" class="bg-white border-2 border-primary text-primary px-6 py-3 rounded-lg font-semibold">📞 Gọi: <span data-cfg="phone">[Số điện thoại]</span></a>
+      <a id="btn-zalo" href="#" target="_blank" rel="noopener" class="bg-[#0068FF] text-white px-6 py-3 rounded-lg font-semibold">💬 Chat Zalo</a>
+    </div>
+  </div>
+</section>
+
+<!-- THANH TOÁN (VietQR qua SePay) — tự ẩn nếu chưa cấu hình ngân hàng -->
+<section id="thanh-toan" class="py-16 px-4 hidden">
+  <div class="max-w-xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-3">Thanh toán chuyển khoản</h2>
+    <p class="text-gray-600 mb-6">Sau khi tư vấn viên xác nhận đơn hàng và số tiền, anh/chị quét mã bằng ứng dụng ngân hàng.</p>
+    <div class="bg-mist p-6 rounded-2xl inline-block">
+      <img id="qr-img" alt="Mã VietQR chuyển khoản" class="w-60 h-60 mx-auto">
+    </div>
+    <p class="mt-4 text-sm"><span id="qr-bank"></span> · <span id="qr-acc" class="font-mono font-semibold"></span></p>
+    <p class="text-sm text-gray-600" id="qr-name"></p>
+    <p class="text-xs text-gray-500 mt-2">Nội dung chuyển khoản: số điện thoại của anh/chị.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="py-16 px-4">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-3xl sm:text-4xl font-bold text-center mb-10">Câu hỏi thường gặp</h2>
+    <div class="space-y-3">
+      <div class="border border-gray-200 rounded-xl overflow-hidden">
+        <button class="faq-toggle w-full text-left p-5 font-semibold flex justify-between items-center gap-4 hover:bg-mist" aria-expanded="false">Sản phẩm Herbalife có phải là thuốc không?<span class="faq-icon text-2xl text-primary">+</span></button>
+        <div class="faq-content hidden px-5 pb-5 text-gray-700">Không. Đây là thực phẩm dinh dưỡng, không phải là thuốc và không có tác dụng thay thế thuốc chữa bệnh. Nếu anh/chị đang điều trị bệnh, vui lòng hỏi ý kiến bác sĩ trước khi dùng.</div>
+      </div>
+      <div class="border border-gray-200 rounded-xl overflow-hidden">
+        <button class="faq-toggle w-full text-left p-5 font-semibold flex justify-between items-center gap-4 hover:bg-mist" aria-expanded="false">Ai nên hỏi ý kiến bác sĩ trước khi dùng?<span class="faq-icon text-2xl text-primary">+</span></button>
+        <div class="faq-content hidden px-5 pb-5 text-gray-700">Phụ nữ mang thai hoặc cho con bú, trẻ em, người có bệnh lý mãn tính (tiểu đường, thận, tim mạch…) hoặc đang dùng thuốc. Tư vấn viên sẽ hỏi kỹ thông tin này trước khi gợi ý.</div>
+      </div>
+      <div class="border border-gray-200 rounded-xl overflow-hidden">
+        <button class="faq-toggle w-full text-left p-5 font-semibold flex justify-between items-center gap-4 hover:bg-mist" aria-expanded="false">Làm sao biết sản phẩm chính hãng?<span class="faq-icon text-2xl text-primary">+</span></button>
+        <div class="faq-content hidden px-5 pb-5 text-gray-700">Sản phẩm có nhãn phụ tiếng Việt, tem và thông tin nhà phân phối tại Việt Nam. Anh/chị nên mua từ thành viên được đăng ký và có thể yêu cầu xem thông tin thành viên khi được tư vấn.</div>
+      </div>
+      <div class="border border-gray-200 rounded-xl overflow-hidden">
+        <button class="faq-toggle w-full text-left p-5 font-semibold flex justify-between items-center gap-4 hover:bg-mist" aria-expanded="false">Dùng bao lâu thì thấy kết quả?<span class="faq-icon text-2xl text-primary">+</span></button>
+        <div class="faq-content hidden px-5 pb-5 text-gray-700">Mỗi người khác nhau tùy cơ địa, chế độ ăn và vận động. Chúng tôi không cam kết con số cụ thể, mà tập trung giúp anh/chị xây thói quen ăn uống cân bằng và duy trì lâu dài.</div>
+      </div>
+      <div class="border border-gray-200 rounded-xl overflow-hidden">
+        <button class="faq-toggle w-full text-left p-5 font-semibold flex justify-between items-center gap-4 hover:bg-mist" aria-expanded="false">Tư vấn có mất phí không? Có bắt buộc mua không?<span class="faq-icon text-2xl text-primary">+</span></button>
+        <div class="faq-content hidden px-5 pb-5 text-gray-700">Tư vấn hoàn toàn miễn phí và không bắt buộc mua hàng. Anh/chị chỉ đặt mua khi thấy phù hợp.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA CUỐI -->
+<section class="py-16 px-4 bg-gradient-to-r from-primary to-[#1B5E20] text-white text-center">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-3xl sm:text-4xl font-bold mb-4">Bắt đầu thói quen dinh dưỡng tốt hơn từ hôm nay</h2>
+    <p class="text-white/85 mb-8">Một buổi trò chuyện 15 phút để hiểu cơ thể mình hơn — miễn phí.</p>
+    <a href="#dang-ky" class="inline-block bg-accent text-white px-8 py-4 rounded-lg text-lg font-semibold hover:opacity-90 transition">Đăng ký tư vấn miễn phí</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-ink text-gray-300 py-10 px-4 text-sm">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+    <div>
+      <p class="text-white font-bold text-lg mb-2" data-cfg="brandName">[Tên thương hiệu]</p>
+      <p>Thành viên độc lập Herbalife: <span data-cfg="memberName">[Họ tên]</span> <span data-cfg="memberId" data-optional="1"></span></p>
+      <p>Đồng sáng lập FITCLUB VIỆT NAM – Chuỗi phòng tập thông minh</p>
+      <p>Điện thoại/Zalo: <span data-cfg="phone">[Số điện thoại]</span></p>
+      <p>Khu vực: <span data-cfg="area">[Khu vực phục vụ]</span></p>
+    </div>
+    <div class="text-gray-400 space-y-2">
+      <p class="font-semibold text-gray-200">Thực phẩm này không phải là thuốc và không có tác dụng thay thế thuốc chữa bệnh.</p>
+      <p>Đây là trang của thành viên độc lập, không phải trang chính thức của Herbalife Việt Nam. Herbalife là nhãn hiệu thuộc sở hữu của Herbalife International. Thông tin sản phẩm chỉ mang tính tham khảo; vui lòng đọc kỹ hướng dẫn trên nhãn trước khi dùng.</p>
+    </div>
+  </div>
+  <p class="text-center text-gray-500 mt-8">&copy; <span id="year"></span> <span data-cfg="brandName">[Tên thương hiệu]</span></p>
+</footer>
+
+<!-- NÚT NỔI (máy tính / máy tính bảng) -->
+<div class="hidden md:flex fixed right-5 bottom-6 z-50 flex-col gap-4 items-end">
+  <a id="fab-zalo" href="#" target="_blank" rel="noopener" class="fab bg-[#0068FF]" aria-label="Chat Zalo">
+    <span class="fab-label">Chat Zalo ngay</span><span class="fab-icon font-extrabold text-sm">Zalo</span>
+  </a>
+  <a id="fab-call" href="#" class="fab bg-primary" aria-label="Gọi điện">
+    <span class="fab-label">Gọi: <span data-cfg="phone"></span></span><span class="fab-icon">📞</span>
+  </a>
+  <a href="#dang-ky" class="fab bg-accent" aria-label="Đăng ký tư vấn miễn phí">
+    <span class="fab-label">Đăng ký tư vấn miễn phí</span><span class="fab-icon">🎁</span>
+  </a>
+</div>
+
+<!-- THANH NÚT DÍNH ĐÁY (điện thoại) — hiện khi cuộn qua phần mở đầu -->
+<div id="sticky-bar" class="sticky-bar md:hidden fixed bottom-0 inset-x-0 z-50 bg-white border-t border-gray-200 shadow-[0_-6px_20px_rgba(0,0,0,.12)] px-3 py-2 grid grid-cols-3 gap-2 text-sm font-semibold">
+  <a id="bar-call" href="#" class="fab-bar-blink flex flex-col items-center justify-center rounded-lg py-2 bg-primary text-white"><span class="fab-icon text-lg">📞</span>Gọi ngay</a>
+  <a id="bar-zalo" href="#" target="_blank" rel="noopener" class="fab-bar-blink flex flex-col items-center justify-center rounded-lg py-2 bg-[#0068FF] text-white"><span class="text-lg font-extrabold leading-6">Zalo</span>Nhắn tin</a>
+  <a href="#dang-ky" class="cta-shine bounce-soft flex flex-col items-center justify-center rounded-lg py-2 bg-accent text-white"><span class="text-lg">🎁</span>Tư vấn free</a>
+</div>
+
+<script>
+  (function () {
+    var C = window.LP_CONFIG || {};
+    var digits = function (s) { return (s || '').replace(/\D/g, ''); };
+
+    // Điền cấu hình vào trang; trường còn trống được tô vàng
+    document.querySelectorAll('[data-cfg]').forEach(function (el) {
+      var v = C[el.getAttribute('data-cfg')];
+      if (v) { el.textContent = el.dataset.optional ? '(mã ' + v + ')' : v; }
+      else if (!el.dataset.optional) { el.classList.add('todo'); }
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    var zaloUrl = C.zalo ? 'https://zalo.me/' + digits(C.zalo) : '';
+    var call = document.getElementById('btn-call');
+    var zalo = document.getElementById('btn-zalo');
+    if (C.phone) call.href = 'tel:' + digits(C.phone); else call.removeAttribute('href');
+    if (zaloUrl) zalo.href = zaloUrl; else zalo.classList.add('hidden');
+    ['fab-call', 'bar-call'].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (C.phone) el.href = 'tel:' + digits(C.phone); else el.classList.add('hidden');
+    });
+    ['fab-zalo', 'bar-zalo'].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (zaloUrl) el.href = zaloUrl; else el.classList.add('hidden');
+    });
+
+    // Hiệu ứng ánh sáng chạy cho mọi nút kêu gọi chính (màu cam)
+    document.querySelectorAll('a.bg-accent, button.bg-accent').forEach(function (el) {
+      if (!el.closest('#sticky-bar')) el.classList.add('cta-shine');
+    });
+
+    // Thanh dính đáy trên điện thoại: hiện sau khi cuộn qua phần mở đầu
+    var bar = document.getElementById('sticky-bar');
+    var toggleBar = function () {
+      var show = window.scrollY > 500;
+      bar.classList.toggle('show', show);
+      document.body.style.paddingBottom = show && window.innerWidth < 768 ? '72px' : '';
+    };
+    window.addEventListener('scroll', toggleBar, { passive: true });
+    toggleBar();
+
+    // VietQR qua SePay — chỉ hiện khi đã cấu hình ngân hàng
+    if (C.bankId && C.accountNo) {
+      document.getElementById('qr-img').src = 'https://qr.sepay.vn/img?bank=' + encodeURIComponent(C.bankId) + '&acc=' + encodeURIComponent(C.accountNo);
+      document.getElementById('qr-bank').textContent = C.bankId;
+      document.getElementById('qr-acc').textContent = C.accountNo;
+      document.getElementById('qr-name').textContent = C.accountName || '';
+      document.getElementById('thanh-toan').classList.remove('hidden');
+    }
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-toggle').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var content = btn.nextElementSibling;
+        var open = content.classList.toggle('hidden') === false;
+        btn.setAttribute('aria-expanded', open);
+        btn.querySelector('.faq-icon').textContent = open ? '−' : '+';
+      });
+    });
+
+    // Form: soạn tin nhắn, sao chép và mở Zalo (không gửi dữ liệu lên máy chủ nào)
+    document.getElementById('lead-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var msg = 'Đăng ký tư vấn dinh dưỡng\n' +
+        'Họ tên: ' + document.getElementById('f-name').value + '\n' +
+        'SĐT: ' + document.getElementById('f-phone').value + '\n' +
+        'Quan tâm: ' + document.getElementById('f-goal').value + '\n' +
+        'Ghi chú: ' + (document.getElementById('f-note').value || '-');
+      var out = document.getElementById('form-msg');
+      var done = function (copied) {
+        out.textContent = copied
+          ? 'Đã sao chép nội dung. Hãy dán vào Zalo và bấm gửi để hoàn tất.'
+          : 'Vui lòng nhắn nội dung đăng ký qua Zalo hoặc gọi điện để được tư vấn.';
+        out.classList.remove('hidden');
+        if (zaloUrl) window.open(zaloUrl, '_blank', 'noopener');
+      };
+      if (navigator.clipboard) navigator.clipboard.writeText(msg).then(function () { done(true); }, function () { done(false); });
+      else done(false);
+    });
+  })();
+</script>
+</body>
+</html>
